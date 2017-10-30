@@ -1,4 +1,6 @@
 def read_text():
-	open()
+	quotes = open("C:\Users\Caleb\Desktop\UDACITY\Python\Misc\profanity editor\profanity_test.txt")
+	contents = quotes.read()
+	print(contents)
 
 read_text()
