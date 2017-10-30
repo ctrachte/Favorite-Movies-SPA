@@ -8,3 +8,4 @@ movies = {'movie1':{'title':"Blade Runner",
 blade_runner = media.Movie(movies['movie1']['title'], movies['movie1']['plot_summary'],movies['movie1']['poster_image'],movies['movie1']['trailer'])
 
 print (blade_runner.storyline)
+blade_runner.show_trailer()
