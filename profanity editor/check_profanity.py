@@ -12,6 +12,11 @@ def read_text():
 def check_profanity(text_to_check):
 	connection = urllib.urlopen("http://www.wdylike.appspot.com/?q="+text_to_check)
 	output = connection.read()
-	print(output)
+	if output:
+		print "--This text contains profanity.--"
+	elif not output:
+		print "--This text does not contain profanity.--"
+	else:
+		"!!!!Error reading text!!!!"
 	connection.close()
 read_text()
