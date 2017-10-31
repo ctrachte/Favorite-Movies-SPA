@@ -29,7 +29,7 @@ movies = {'movie1':{'title':"Blade Runner",
 	'movie6':{'title':"Oldboy (2003)",
 	'plot_summary':"Dae-Su is an obnoxious drunk bailed from the police station yet again by a friend. However, he's abducted from the street and wakes up in a cell, where he remains for the next 15 years, drugged unconscious when human contact is unavoidable, otherwise with only the television as company. And then, suddenly released, he is invited to track down his jailor with a denouement that is simply stunning.",
 	'poster_image':"http://www.gstatic.com/tv/thumb/movieposters/35948/p35948_p_v8_aa.jpg",
-	'trailer':"https://youtu.be/etzlHURXTqw"}
+	'trailer':"https://www.youtube.com/watch?v=eRBwvIX7Sao"}
 	}
 
 blade_runner = media.Movie(movies['movie1']['title'], movies['movie1']['plot_summary'],movies['movie1']['poster_image'],movies['movie1']['trailer'])
