@@ -6,10 +6,10 @@ movies = {'movie1':{'title':"Blade Runner",
 	'poster_image':"http://t3.gstatic.com/images?q=tbn:ANd9GcTcvek3p12Gwqwk-2wjTSHWTNq0LTTeoOgXUwqerVOY2u9zjOgO",
 	'trailer':"https://www.youtube.com/watch?v=eogpIG53Cis"},
 
-	'movie2':{'title':"Ghost in the Shell 1995",
+	'movie2':{'title':"Ghost in the Shell (1995)",
 	'plot_summary':"In this Japanese animation, cyborg federal agent Maj. Motoko Kusanagi (Mimi Woods) trails 'The Puppet Master' (Abe Lasser), who illegally hacks into the computerized minds of cyborg-human hybrids. Her pursuit of a man who can modify the identity of strangers leaves Motoko pondering her own makeup and what life might be like if she had more human traits. With her partner (Richard George), she corners the hacker, but her curiosity about her identity sends the case in an unforeseen direction.",
 	'poster_image':"http://t2.gstatic.com/images?q=tbn:ANd9GcSRHINQm1r493AJQIMk9J2CMtl5AbO5IgyTGmQV64FQbxXO8AwU",
-	'trailer':"https://www.youtube.com/watch?v=p2MEaROKjaE"},
+	'trailer':"https://youtu.be/AsIQ_kA77b4"},
 
 	'movie3':{'title':"Blade Runner 2049",
 	'plot_summary':"Officer K (Ryan Gosling), a new blade runner for the Los Angeles Police Department, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. His discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former blade runner who's been missing for 30 years.",
@@ -24,7 +24,12 @@ movies = {'movie1':{'title':"Blade Runner",
 	'movie5':{'title':"Hot Rod",
 	'plot_summary':"For Rod Kimball (Andy Samberg), performing stunts is a way of life, even though he is rather accident-prone. Poor Rod cannot even get any respect from his stepfather, Frank (Ian McShane), who beats him up in weekly sparring matches. When Frank falls ill, Rod devises his most outrageous stunt yet to raise money for Frank's operation -- and then Rod will kick Frank's butt.",
 	'poster_image':"http://www.gstatic.com/tv/thumb/movieposters/165093/p165093_p_v8_aa.jpg",
-	'trailer':"https://www.youtube.com/watch?v=DhdrA9qz79o"}
+	'trailer':"https://www.youtube.com/watch?v=DhdrA9qz79o"},
+
+	'movie5':{'title':"Oldboy (2003)",
+	'plot_summary':"Dae-Su is an obnoxious drunk bailed from the police station yet again by a friend. However, he's abducted from the street and wakes up in a cell, where he remains for the next 15 years, drugged unconscious when human contact is unavoidable, otherwise with only the television as company. And then, suddenly released, he is invited to track down his jailor with a denouement that is simply stunning.",
+	'poster_image':"http://www.gstatic.com/tv/thumb/movieposters/35948/p35948_p_v8_aa.jpg",
+	'trailer':"https://youtu.be/2HkjrJ6IK5E"}
 	}
 
 blade_runner = media.Movie(movies['movie1']['title'], movies['movie1']['plot_summary'],movies['movie1']['poster_image'],movies['movie1']['trailer'])
