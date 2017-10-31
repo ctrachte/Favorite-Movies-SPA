@@ -42,7 +42,9 @@ prometheus = media.Movie(movies['movie4']['title'], movies['movie4']['plot_summa
 
 hot_rod = media.Movie(movies['movie5']['title'], movies['movie5']['plot_summary'],movies['movie5']['poster_image'],movies['movie5']['trailer'])
 
-movie_ids = [blade_runner,gits_1995,blade_runner_2049,prometheus,hot_rod]
+oldboy = media.Movie(movies['movie6']['title'], movies['movie6']['plot_summary'],movies['movie6']['poster_image'],movies['movie6']['trailer'])
+
+movie_ids = [blade_runner,gits_1995,blade_runner_2049,prometheus,hot_rod, oldboy]
 
 fresh_tomatoes.open_movies_page(movie_ids)
 
