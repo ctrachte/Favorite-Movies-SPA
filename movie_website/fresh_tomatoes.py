@@ -53,6 +53,8 @@ main_page_head = '''
             top: 0;
             background-color: black;
         }
+        //all credit for flip-container goes to https://davidwalsh.name/css-flip
+
         /* entire container, keeps perspective */
         .flip-container {
           perspective: 1000px;
@@ -148,7 +150,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Cold Spaghetti - Greatest Movies</a>
+            <a class="navbar-brand" href="#"> Cold Spaghetti - A listing of the greatest movies of all time.</a>
           </div>
         </div>
       </div>
