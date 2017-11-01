@@ -34,7 +34,7 @@ movies = {
 
 	'movie4':{'title':"Prometheus",
 	'rating':"R",
-	'director':"Ridely Scott",
+	'director':"Ridley Scott",
 	'genre': "Mystery/Science Fiction",
 	'year':"(2012)",
 	'duration':"2h 4m",
