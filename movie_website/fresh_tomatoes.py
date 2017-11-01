@@ -85,6 +85,7 @@ main_page_head = '''
 # The main page layout and title bar
 main_page_content = '''
 <!DOCTYPE html>
+
 <html lang="en">
   <body>
     <!-- Trailer Video Modal -->
@@ -101,6 +102,14 @@ main_page_content = '''
     </div>
     
     <!-- Main Page Content -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js">
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">
+    <script type="text/javascript" charset="utf-8">
+      $("#card").flip({
+        axis: 'x',
+        trigger: 'hover'
+      });
+    </script>
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -110,8 +119,13 @@ main_page_content = '''
         </div>
       </div>
     </div>
-    <div class="container">
-      {movie_tiles}
+    <div class="card">
+      <div class="front">
+        {movie_tiles} 
+      </div> 
+      <div class="back">
+        {movie_desc}
+      </div>  
     </div>
   </body>
 </html>
