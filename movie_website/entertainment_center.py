@@ -47,6 +47,3 @@ oldboy = media.Movie(movies['movie6']['title'], movies['movie6']['plot_summary']
 movie_ids = [blade_runner,gits_1995,blade_runner_2049,prometheus,hot_rod, oldboy]
 
 fresh_tomatoes.open_movies_page(movie_ids)
-
-#print (blade_runner.storyline)
-#blade_runner.show_trailer()
