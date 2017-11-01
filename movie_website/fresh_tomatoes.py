@@ -170,9 +170,9 @@ movie_tile_content = '''
         <h2>{movie_title}</h2>
       </div>
       <div class="back">
-        <h1><b>{movie_title}</b></h1>
-        <h2>"["{movie_rating}"]"{movie_year}" "{movie_genre}" "{movie_duration}</h2>
-        <h3> "Directed by: " {movie_director}</h3>
+        <h2><b>{movie_title}</b></h2>
+        <h3>[{movie_rating}] {movie_year} {movie_genre} {movie_duration}</h3>
+        <h4> Directed by: {movie_director}</h4>
         <p>{movie_desc}</p>
       </div>
     </div>
