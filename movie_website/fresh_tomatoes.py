@@ -171,7 +171,9 @@ movie_tile_content = '''
       </div>
       <div class="back">
         <h1><b>{movie_title}</b></h1>
-        {movie_desc}
+        <h2>"["{movie_rating}"]"{movie_year}" "{movie_genre}" "{movie_duration}</h2>
+        <h3> "Directed by: " {movie_director}</h3>
+        <p>{movie_desc}</p>
       </div>
     </div>
   </div>
@@ -192,7 +194,12 @@ def create_movie_tiles_content(movies):
             movie_desc=movie.storyline,
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            movie_rating=rating,
+            movie_genre=genre,
+            movie_director=director,
+            movie_duration=duration,
+            movie_year=year
         )
     return content
 
