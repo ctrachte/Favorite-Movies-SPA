@@ -102,14 +102,6 @@ main_page_content = '''
     </div>
     
     <!-- Main Page Content -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js">
-    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">
-    <script type="text/javascript" charset="utf-8">
-      $("#card").flip({
-        axis: 'x',
-        trigger: 'hover'
-      });
-    </script>
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -119,13 +111,8 @@ main_page_content = '''
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="front">
-        {movie_tiles} 
-      </div> 
-      <div class="back">
-        {movie_desc}
-      </div>  
+    <div class="container">
+      {movie_tiles}
     </div>
   </body>
 </html>
@@ -133,9 +120,24 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $("#card").flip({
+    axis: 'x',
+    trigger: 'hover'
+  });
+</script>
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
+  <div id="card">
+    <div class="front">
+      <img src="{poster_image_url}" width="220" height="342">
+      <h2>{movie_title}</h2>
+    </div>
+    <div class="back">
+      <h3>{movie_desc}</h3>
+    </div>
+  </div>
 </div>
 '''
 
