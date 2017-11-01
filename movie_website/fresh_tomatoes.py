@@ -53,6 +53,48 @@ main_page_head = '''
             top: 0;
             background-color: black;
         }
+        /* entire container, keeps perspective */
+        .flip-container {
+          perspective: 1000px;
+        }
+          /* flip the pane when hovered */
+          .flip-container:hover .flipper, .flip-container.hover .flipper {
+            transform: rotateY(180deg);
+        }
+
+        .flip-container, .front, .back {
+          width: 320px;
+          height: 480px;
+        }
+
+        /* flip speed goes here */
+        .flipper {
+          transition: 0.6s;
+          transform-style: preserve-3d;
+
+          position: relative;
+        }
+
+        /* hide back of pane during swap */
+        .front, .back {
+          backface-visibility: hidden;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        /* front pane, placed above back */
+        .front {
+          z-index: 2;
+          /* for firefox 31 */
+          transform: rotateY(0deg);
+        }
+
+        /* back, initially hidden pane */
+        .back {
+          transform: rotateY(180deg);
+        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -120,22 +162,17 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-  $("#card").flip({
-    axis: 'x',
-    trigger: 'hover'
-  });
-</script>
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-  <div id="card">
-    <div class="front">
-      <img src="{poster_image_url}" width="220" height="342">
-      <h2>{movie_title}</h2>
-    </div>
-    <div class="back">
-      <h3>{movie_desc}</h3>
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+    <div class="flipper">
+      <div class="front">
+        <img src="{poster_image_url}" width="220" height="342">
+        <h2>{movie_title}</h2>
+      </div>
+      <div class="back">
+        <h1><b>{movie_title}</b></h1>
+        {movie_desc}
+      </div>
     </div>
   </div>
 </div>
