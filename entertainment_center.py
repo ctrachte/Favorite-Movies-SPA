@@ -1,6 +1,7 @@
 import fresh_tomatoes
 import media
 
+#Dictionary of movies and their respective information, stored in appropriately named variables
 movies = {
 	'movie1':{'title':"Blade Runner",
 	'rating':"R",
@@ -76,24 +77,69 @@ movies = {
 	'trailer':"https://www.youtube.com/watch?v=eRBwvIX7Sao"}
 	}
 
-blade_runner = media.Movie(movies['movie1']['title'], movies['movie1']['plot_summary'],movies['movie1']['poster_image'],movies['movie1']['trailer'],
-	movies['movie1']['rating'],movies['movie1']['director'],movies['movie1']['genre'],movies['movie1']['year'],movies['movie1']['duration'])
+#Movie instances storing information for each movie
+blade_runner = media.Movie(movies['movie1']['title'],
+							movies['movie1']['plot_summary'],
+							movies['movie1']['poster_image'],
+							movies['movie1']['trailer'],
+							movies['movie1']['rating'],
+							movies['movie1']['director'],
+							movies['movie1']['genre'],
+							movies['movie1']['year'],
+							movies['movie1']['duration'])
 
-gits_1995 = media.Movie(movies['movie2']['title'], movies['movie2']['plot_summary'],movies['movie2']['poster_image'],movies['movie2']['trailer'],
-	movies['movie2']['rating'],movies['movie2']['director'],movies['movie2']['genre'],movies['movie2']['year'],movies['movie2']['duration'])
+gits_1995 = media.Movie(movies['movie2']['title'],
+						movies['movie2']['plot_summary'],
+						movies['movie2']['poster_image'],
+						movies['movie2']['trailer'],
+						movies['movie2']['rating'],
+						movies['movie2']['director'],
+						movies['movie2']['genre'],
+						movies['movie2']['year'],
+						movies['movie2']['duration'])
 
-blade_runner_2049 = media.Movie(movies['movie3']['title'], movies['movie3']['plot_summary'],movies['movie3']['poster_image'],movies['movie3']['trailer'],
-	movies['movie3']['rating'],movies['movie3']['director'],movies['movie3']['genre'],movies['movie3']['year'],movies['movie3']['duration'])
+blade_runner_2049 = media.Movie(movies['movie3']['title'],
+								movies['movie3']['plot_summary'],
+								movies['movie3']['poster_image'],
+								movies['movie3']['trailer'],
+								movies['movie3']['rating'],
+								movies['movie3']['director'],
+								movies['movie3']['genre'],
+								movies['movie3']['year'],
+								movies['movie3']['duration'])
 
-prometheus = media.Movie(movies['movie4']['title'], movies['movie4']['plot_summary'],movies['movie4']['poster_image'],movies['movie4']['trailer'],
-	movies['movie4']['rating'],movies['movie4']['director'],movies['movie4']['genre'],movies['movie4']['year'],movies['movie4']['duration'])
+prometheus = media.Movie(movies['movie4']['title'],
+						movies['movie4']['plot_summary'],
+						movies['movie4']['poster_image'],
+						movies['movie4']['trailer'],
+						movies['movie4']['rating'],
+						movies['movie4']['director'],
+						movies['movie4']['genre'],
+						movies['movie4']['year'],
+						movies['movie4']['duration'])
 
-hot_rod = media.Movie(movies['movie5']['title'], movies['movie5']['plot_summary'],movies['movie5']['poster_image'],movies['movie5']['trailer'],
-	movies['movie5']['rating'],movies['movie5']['director'],movies['movie5']['genre'],movies['movie5']['year'],movies['movie5']['duration'])
 
-oldboy = media.Movie(movies['movie6']['title'], movies['movie6']['plot_summary'],movies['movie6']['poster_image'],movies['movie6']['trailer'],
-	movies['movie6']['rating'],movies['movie6']['director'],movies['movie6']['genre'],movies['movie6']['year'],movies['movie6']['duration'])
+hot_rod = media.Movie(movies['movie5']['title'],
+					movies['movie5']['plot_summary'],
+					movies['movie5']['poster_image'],
+					movies['movie5']['trailer'],
+					movies['movie5']['rating'],
+					movies['movie5']['director'],
+					movies['movie5']['genre'],
+					movies['movie5']['year'],
+					movies['movie5']['duration'])
 
+oldboy = media.Movie(movies['movie6']['title'],
+					movies['movie6']['plot_summary'],
+					movies['movie6']['poster_image'],
+					movies['movie6']['trailer'],
+					movies['movie6']['rating'],
+					movies['movie6']['director'],
+					movies['movie6']['genre'],
+					movies['movie6']['year'],
+					movies['movie6']['duration'])
+
+#List of movie instances by ID to be referenced in the open_movies_page method
 movie_ids = [blade_runner,gits_1995,blade_runner_2049,prometheus,hot_rod, oldboy]
 
 fresh_tomatoes.open_movies_page(movie_ids)
